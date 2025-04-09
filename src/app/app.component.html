@@ -1,8 +1,25 @@
 <main class="main">
+
+  <mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" matTooltip="Descarga mi CV!"
+    aria-label="CV PDF">
+      <mat-icon>description</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
   <div class="content">
-    <h1>Bienvenido a mi CV</h1>
+    <h1 class="titulo">
+      <span class="negrita">Hola! soy sebastian</span>, bienvenido a mi CV
+    </h1>
     <app-about></app-about>
-    <button mat-raised-button color="primary">Botón de prueba</button>
   </div>
 </main>
 
