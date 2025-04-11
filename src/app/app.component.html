@@ -1,21 +1,23 @@
 <main class="main">
-
   <mat-toolbar>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
     <span>My App</span>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" matTooltip="Descarga mi CV!"
-    aria-label="CV PDF">
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
+      matTooltip="Descarga mi CV!" aria-label="CV PDF">
       <mat-icon>description</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
+      [routerLink]="['/jira-copy']" matTooltip="Ver Jira Clone" aria-label="Ir a Jira Copy">
+      <mat-icon>bar_chart</mat-icon>
     </button>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>share</mat-icon>
     </button>
   </mat-toolbar>
-
-<div class="content">
-  <router-outlet />
-</div>
+  <div class="content">
+    <router-outlet />
+  </div>
 </main>
