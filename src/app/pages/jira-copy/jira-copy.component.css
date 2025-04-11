@@ -1,0 +1,46 @@
+.tabla-semanal {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-family: Roboto, sans-serif;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .tabla-semanal th,
+  .tabla-semanal td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .tabla-semanal th {
+    background-color: #f5f5f5;
+    font-weight: 500;
+    color: #424242;
+  }
+  
+  .tabla-semanal tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  .col-dia {
+    font-weight: 600;
+    background-color: #f0f0f0;
+  }
+  
+  .col-celda:hover {
+    background-color: #e3f2fd;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .titulo-tabla {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #1a237e;
+    font-weight: 500;
+  }
+  

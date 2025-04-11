@@ -1,41 +1,21 @@
 <h2>Lista de tareas</h2>
 
-<!-- <ul>
-  <li *ngFor="let tarea of tareas">
-    <strong>{{ tarea.titulo }}</strong> — 
-    {{ tarea.descripcion }} — 
-    {{ tarea.completada ? '✅ Completada' : '⏳ Pendiente' }}
-  </li>
-</ul> -->
+<table class="tabla-semanal">
 
+    <thead>
+        <tr>
+            <th>Día</th>
+            <th *ngFor="let semana of semanas">Semana {{ semana }}</th>
+        </tr>
+    </thead>
 
-<h2>Lista de tareas</h2>
+    <tbody>
+        <tr *ngFor="let dia of diasDelMes">
+            <td>{{ dia }}</td>
+            <td *ngFor="let semana of semanas">
+                <span *ngIf="hayTarea(dia, semana)">📌</span>
+            </td>
 
-<table mat-table [dataSource]="tareas" class="mat-elevation-z8">
+    </tbody>
 
-  <!-- Título -->
-  <ng-container matColumnDef="titulo">
-    <th mat-header-cell *matHeaderCellDef> Título </th>
-    <td mat-cell *matCellDef="let element"> {{ element.titulo }} </td>
-  </ng-container>
-
-  <!-- Descripción -->
-  <ng-container matColumnDef="descripcion">
-    <th mat-header-cell *matHeaderCellDef> Descripción </th>
-    <td mat-cell *matCellDef="let element"> {{ element.descripcion }} </td>
-  </ng-container>
-
-  <!-- Estado -->
-  <ng-container matColumnDef="completada">
-    <th mat-header-cell *matHeaderCellDef> Estado </th>
-    <td mat-cell *matCellDef="let element">
-      {{ element.completada ? '✅ Completada' : '⏳ Pendiente' }}
-    </td>
-  </ng-container>
-
-  <!-- Encabezados y filas -->
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-
-  

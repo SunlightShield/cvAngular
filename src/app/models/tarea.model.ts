@@ -4,4 +4,5 @@ export interface Tarea {
     descripcion: string;
     completada: boolean;
     fechaCreacion: string;
+    semanaDelMes: number;
   }
