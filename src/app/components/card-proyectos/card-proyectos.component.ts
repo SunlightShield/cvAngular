@@ -27,6 +27,8 @@ export class CardProyectosComponent {
       data: {
         titulo: proyecto.titulo,
         descripcion: proyecto.descripcion,
+        link1: proyecto.link1,
+        link2: proyecto.link2,
       },
     });
   }

@@ -1,7 +1,12 @@
-<h1 mat-dialog-title>{{ data.titulo }}</h1>
-<div mat-dialog-content>
-  <p>{{ data.descripcion }}</p>
-</div>
-<div mat-dialog-actions>
-  <button mat-button mat-dialog-close>Cerrar</button>
+<div id="modal">
+  <h1 mat-dialog-title>{{ data.titulo }}</h1>
+  <div mat-dialog-content>
+    <p>{{ data.descripcion }}</p>
+    <button mat-button color="primary">{{data.link1}}</button>
+    <button mat-button color="primary">{{data.link2}}</button>
+  </div>
+
+  <div mat-dialog-actions id="botones">
+    <button mat-button color="primary">Cerrar</button>
+  </div>
 </div>
