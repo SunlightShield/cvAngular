@@ -1,7 +1,6 @@
 <div class="grid-wrapper">
   <div class="grid-item">
     <mat-card class="card-tecnologia">
-      <img mat-card-image src="assets/img/fondo.png" alt="Photo of a Shiba Inu" />
       <mat-card-header>
         <div mat-card-avatar class="card-tecnologia-image"></div>
         <mat-card-title>Tecnologías</mat-card-title>
@@ -13,7 +12,7 @@
       <mat-card-content>
         <div class="grid-tecnologias">
           <div class="mini-card" *ngFor="let tech of tecnologias">
-            <img [src]="tech.img" alt="{{ tech.nombre }}" />
+            <img mat-card-image [src]="tech.img" alt="{{ tech.nombre }}"/>
             <p>{{ tech.nombre }}</p>
           </div>
         </div>

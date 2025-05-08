@@ -1,9 +1,6 @@
 <main class="main">
-  <mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
+  <mat-toolbar id="header">
+    <span>Sebastian Espinoza</span>
     <span class="example-spacer"></span>
       <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon"
       [routerLink]="['/descarga-cv']"
@@ -14,11 +11,22 @@
       [routerLink]="['/jira-copy']" matTooltip="Ver Jira Clone" aria-label="Ir a Jira Copy">
       <mat-icon>bar_chart</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>share</mat-icon>
-    </button>
+    </button> -->
   </mat-toolbar>
   <div class="content">
     <router-outlet />
   </div>
+
+  <!-- --footer -->
+  <mat-toolbar class="footer">
+    <div class="footer-content">
+      <span>&copy; 2025 Sebastian Espinoza</span>
+      <div class="footer-links">
+        <a href="https://github.com/SunlightShield">Mi Git</a>
+        <a href="https://www.linkedin.com/in/sebastian-espinoza-software-developer/">Mi Linkdln</a>
+      </div>
+    </div>
+  </mat-toolbar>
 </main>
