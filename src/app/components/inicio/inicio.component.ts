@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { AboutComponent } from '../../about/about.component';
+import { CardLenguajesComponent } from '../card-lenguajes/card-lenguajes.component';
+import { CardProyectosComponent } from '../card-proyectos/card-proyectos.component';
 
 @Component({
   selector: 'app-inicio',
-  imports: [AboutComponent],
+  imports: [AboutComponent, CardLenguajesComponent, CardProyectosComponent],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css'
 })
