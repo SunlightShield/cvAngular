@@ -1,21 +1,24 @@
-.flex-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10%;
-    box-sizing: border-box;
-  }
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+}
 
-.container-about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.grid-item {
+  grid-column: 3 / span 8;
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    grid-column: 2 / span 10;
   }
-  
-  .card-about {
-    border: 2px solid black;
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 16px
-  }
-  
+}
+
+.card-about {
+  border: 2px solid black;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+}

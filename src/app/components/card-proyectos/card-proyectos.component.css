@@ -1,21 +1,63 @@
-.flex-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 10%;
-    box-sizing: border-box;
-  }
+/* Grilla para contenedores generales */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+}
 
-.container-about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.grid-item {
+  grid-column: 3 / span 8; /* 2-8-2 layout en desktop */
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    grid-column: 2 / span 10; /* 1-10-1 layout en mobile */
   }
-  
-  .card-about {
-    border: 2px solid black;
-    border-radius: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    padding: 16px
+}
+
+/* Flexbox para centrar todo el contenedor */
+.flex-wrapper {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  box-sizing: border-box;
+}
+
+/* Contenedor de los proyectos */
+.container-proyectos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo de la card */
+.card-about {
+  border: 2px solid black;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-proyectos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 2%;
+}
+
+button {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .grid-proyectos {
+    grid-template-columns: 1fr; /* Asegura que haya solo una columna en pantallas más pequeñas */
   }
-  
+}

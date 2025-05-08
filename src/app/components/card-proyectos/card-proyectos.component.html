@@ -1,8 +1,17 @@
-<div class="flex-wrapper">
-    <div class="container-about">
-        <mat-card class="card-about" appearance="outlined">
-            <mat-card-title>Mis Proyectos</mat-card-title>
-            <mat-card-content>Aca van mis proyectos</mat-card-content>
-        </mat-card>
-    </div>
+<div class="grid-wrapper">
+  <div class="grid-item">
+    <mat-card class="card-about" appearance="outlined">
+      <mat-card-title>Mis Proyectos</mat-card-title>
+      <mat-card-content>
+        <p>Aquí van mis proyectos:</p>
+        <div class="grid-proyectos">
+          <div *ngFor="let proyecto of proyectos">
+            <button mat-raised-button color="primary" (click)="abrirModal(proyecto)">
+              {{ proyecto.titulo }}
+            </button>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
